@@ -33,9 +33,9 @@ export const CardContainer = () => {
       }
 
   return (
-    <div className='flex w-full flex-wrap'>
+    <div className='flex justify-center m-auto w-5/6 flex-wrap gap-2'>
         {characters?characters.map((character)=>{
-            return <Card name={character.name} specie={character.species} image={character.image}/>
+            return <Card key={character.id} name={character.name} specie={character.species} image={character.image}/>
         }):[]}
 
     </div>

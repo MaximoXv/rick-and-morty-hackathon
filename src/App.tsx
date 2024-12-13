@@ -1,10 +1,13 @@
+import { CardContainer } from "./components/card-container"
+import { Header } from "./components/header"
 
 function App() {
 
 
   return (
     <>
-        <h1 className='bg-slate-950'>Rick and Morty Hackathon</h1>
+        <Header></Header>
+        <CardContainer></CardContainer>
     </>
   )
 }
