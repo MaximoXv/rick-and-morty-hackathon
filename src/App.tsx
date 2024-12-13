@@ -1,3 +1,4 @@
+
 import { CardContainer } from "./components/card-container"
 import { Header } from "./components/header"
 
@@ -6,7 +7,7 @@ function App() {
 
   return (
     <>
-        <Header></Header>
+        <Header/>
         <CardContainer></CardContainer>
     </>
   )
