@@ -3,10 +3,12 @@ import { useEffect, useState } from 'react';
 import { Card } from './card'
 import axios from 'axios';
 
-interface Character{
+export interface Character{
     id: string;
     name: string;
+    status: string;
     species: string;
+    gender: string;
     image: string;
 }
 
@@ -55,9 +57,9 @@ export const CardContainer = () => {
         <button className='px-3 py-1 rounded-md bg-black text-white' onClick={orderToAZ}>A-Z</button>
         <button className='px-3 py-1 rounded-md bg-white text-black border-black border-2' onClick={orderToZA}>Z-A</button>
     </div>
-    <div className='flex justify-center m-auto w-5/6 flex-wrap gap-2'>
+    <div className='flex justify-center m-auto w-5/6 flex-wrap gap-2 relative'>
         {characters?characters.map((character)=>{
-            return <Card key={character.id} name={character.name} specie={character.species} image={character.image}/>
+            return <Card key={character.id} character={character}/>
         }):[]}
 
     </div>
